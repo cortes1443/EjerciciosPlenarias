@@ -34,19 +34,12 @@ public class Ejcio38a {
 
         int[] sumatoria = new int[m];
         int cont = 0;
-        int solucion;
 
-
-        if(n%2 == 0){
-            solucion = 0;
-        }else{
-            solucion = 1;
-        }
 
 
         for(int i=0;i<m;i++){
-            for(int j=0;j<(n/2) + solucion;j++){
-                cont += matriz[i][j*2] + matriz[i][(j*2)+1];
+            for(int j=0;j<n;j++){
+                cont += matriz[i][j];
             }
             sumatoria[i] = cont;
             cont = 0;
