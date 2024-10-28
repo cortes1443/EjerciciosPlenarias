@@ -10,9 +10,8 @@ public class Ejcio510 {
 
         int promedio = calcularSuma(arr)/arr.size();
 
-        calcularNroMenores(arr, promedio);
-        calcularNroMayores(arr, promedio);
         mostrarMenores(arr, promedio);
+        mostrarMayores(arr, promedio);
 
     }
 
@@ -76,7 +75,21 @@ public class Ejcio510 {
                 }
             }
         } else{
-            System.out.print("ninguno");
+            System.out.print("No se han encontrado");
+        }
+    }
+
+    static void mostrarMayores(ArrayList<Integer> arr, int promedio){
+
+        System.out.print("\nNumeros mayores a el promedio: ");
+        if(calcularNroMayores(arr, promedio) > 0){
+            for(int i = 0; i<arr.size();i++){
+                if(arr.get(i) >= promedio){
+                    System.out.print(arr.get(i) + "|");
+                }
+            }
+        } else{
+            System.out.print("No se han encontrado");
         }
     }
 }
