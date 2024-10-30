@@ -1,10 +1,14 @@
 package com.semana14;
 
 public class Persona {
-    String nombre;
-    String apellido;
-    int identidad;
-    int nacimiento;
+    private String nombre;
+    private String apellido;
+    private int identidad;
+    private int nacimiento;
+
+    private String genero;
+    private String direccion;
+    private int telefono;
 
     public Persona(String nombre, String apellido, int identidad, int nacimiento){
         this.nombre = nombre;
@@ -51,5 +55,31 @@ public class Persona {
         System.out.print("\nMi nombre es " + getNombre() + " " + getApellido() + ",");
         System.out.print(" con identificacion: " + getID() + ",");
         System.out.print(" nacido en " + getAnio());
+    }
+
+
+    //////////////////////////////////////
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
     }
 }
